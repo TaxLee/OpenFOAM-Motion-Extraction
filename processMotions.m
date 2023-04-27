@@ -1,21 +1,27 @@
 % DESCRIPTION OF THE CODE:
-% This code processes motion data from .txt and .txt files in all folders.
-% The user can choose which data files to import and process through the
-% flags at the beginning of the script.
-% It reads the data, calculates the Euler angles and water surface
-% elevation, and saves the output in .mat files.
-
-% Flags:
-% 1. import_trans_orient: Whether to import translation and orientation
-% data. Set to 1 to import, 0 otherwise. Default: 1.
-% 2. import_forces_moments: Whether to import forces and moments data. Set
-% to 1 to import, 0 otherwise. Default: 1.
-% 3. import_waveGauges: Whether to import water surface elevation data
-% from wave gauges. Set to 1 to import, 0 otherwise. Default: 1.
+% This MATLAB code processes motion data from .txt and .txt files in all
+% subfolders. With this code, you can easily import and process data,
+% calculate Euler angles and water surface elevation, and save the output
+% in .mat files.
 %
 % Author: Shuijin Li
-% Date: 30 Jan 2023
+% Date: 12 Mar 2023
 % Email: skli@dundee.ac.uk
+%
+% Usage:
+%   1. Clone or download the repository to your local machine.
+%   2. Set the flags at the beginning of the script to choose which data
+%      files to import and process.
+%   3. Run the script in MATLAB.
+%
+% Flags:
+%   1. import_motions: Whether to import translation and orientation data.
+%      Set to 1 to import, 0 otherwise. Default: 1.
+%   2. import_forces_moments: Whether to import forces and moments data.
+%      Set to 1 to import, 0 otherwise. Default: 1.
+%   3. import_waveGauges: Whether to import water surface elevation data
+%      from wave gauges. Set to 1 to import, 0 otherwise. Default: 1.
+%
 
 %% Clear all
 clear all; clc;
@@ -76,7 +82,6 @@ folders = folders([folders.isdir]);
 folders = folders(~ismember({folders.name},[exclude_folders, '.', '..']));
 
 %% Calculation
-% for ii = 5:9
 for ii = 1:length(folders)
     %% Initialize 
     clear t_vs_cm t_vs_orientation f index temp t xi_4 xi_5 xi_6 data_forces_temp data_SE motions SE resultsFolder_final
