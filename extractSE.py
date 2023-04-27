@@ -1,3 +1,19 @@
+"""
+Program: CSV data extraction and conversion
+Author: Shuijin Li
+Email: skli@dundee.ac.uk
+Date: 12 Mar 2023
+
+This program reads CSV files from the './output' subdirectory, extracts data based on specific criteria,
+and saves the extracted data as text files in the same directory. The program then moves the extracted
+text files back to the './output' subdirectory.
+
+The program uses the following libraries:
+
+os: provides access to operating system functionalities such as file handling
+pandas: provides data manipulation and analysis tools
+"""
+
 import os
 import pandas as pd
 
