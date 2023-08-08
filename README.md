@@ -39,4 +39,4 @@ Contributions are welcome! If you have any suggestions or improvements for these
 
 ## Acknowledgments
 
-This code was developed by Shuijin Li at Dundee University.
+This code was developed by Shuijin Li at University of Dundee.
